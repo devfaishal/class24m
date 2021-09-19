@@ -198,6 +198,7 @@ ul.main_menu li:hover ul{
 	transition: all .5s;
 }
 .service_item:hover{
+	transform: scale(1.02);
 	background: #3a4af2;
 	color: #fff;
 }
