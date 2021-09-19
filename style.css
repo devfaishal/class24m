@@ -1,5 +1,6 @@
 body,p,span{
     font-family: 'Spartan', sans-serif;
+	overflow-x: hidden;
 }
 
 
@@ -151,14 +152,179 @@ ul.main_menu li a:hover{}
 	font-size: 14px;
 }
 
+/* Get Redy Section */
+.get_redy_section{
+	background: url(https://i.ibb.co/myRbsv6/video-bg.jpg) no-repeat top center;
+	background-size: cover;
+	padding: 157px;
+	position: relative;
+	z-index: 1;
+}
+.get_redy_section::after{
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(1, 38, 58, 0.802);
+	z-index: -1;
+}
+.content_text h6 {
+	margin-bottom: 20px;
+	font-size: 13px;
+}
+.content_text h2 {
+	font-weight: 700;
+	margin-bottom: 37px;
+	position: relative;
+}
+.content_text h2::after {
+	content: "";
+	position: absolute;
+	top: 53px;
+	left: 356px;
+	width: 82px;
+	height: 2px;
+	background: #fff;
+}
+.content_text p {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+/* Video Button */
+.video_btn {
+	margin: auto;
+	background: #fff;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	line-height: 84px;
+	position: relative;
+	z-index: 1;
+	transition: all .7s;
+}
+.video_btn:hover{
+	background: #3165eb;
+}
+.video_btn:hover a{
+	color: #fff;
+}
+.video_btn a {
+	padding: 28%;
+	font-size: 20px;
+	color: #2a2aca;
+	margin-top: 50px;
+	border-radius: 50%;
+	transition: all .7s;
+}
+.video_btn::before{
+	content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-animation: playbtn 2s ease-out infinite;
+    animation: playbtn 2s ease-out infinite;
+	z-index: -1;
+}
+.video_btn::after{
+	content: "";
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid#fff;
+    border-radius: 50%;
+    -webkit-animation: playbtn1 2s ease-out infinite;
+    animation: playbtn1 2s ease-out infinite;
+	z-index: -1;
+}
+
+@-webkit-keyframes playbtn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    25%{
+        transform: scale(1.3);
+        opacity: .4;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 1.5;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
 
 
+@keyframes playbtn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    25%{
+        transform: scale(1.3);
+        opacity: .4;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 1.5;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
 
+@-webkit-keyframes playbtn1{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    25%{
+        transform: scale(1.3);
+        opacity: .4;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 1.5;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
 
-
-
-
-
-
-
-
+@keyframes playbtn1{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    25%{
+        transform: scale(1.3);
+        opacity: .4;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 1.5;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
