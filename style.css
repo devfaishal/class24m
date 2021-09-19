@@ -17,7 +17,6 @@ body,p,span{
 	z-index: 1;
 	transition: .5s;
 	overflow: hidden;
-	transition-duration: .5s;
 }
 .header_button a:hover{
 	color: #fff;
@@ -30,11 +29,11 @@ body,p,span{
 	width: 0;
 	height: 100%;
 	background: #7672fe;
+	border-radius: 30px;
 	opacity: 0;
 	visibility: hidden;
 	z-index: -1;
-	transition: .5s;
-	transition-duration: .5s;
+	transition: .7s;
 }
 .header_btn:hover::after{
 	opacity: 1;
