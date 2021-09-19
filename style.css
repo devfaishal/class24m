@@ -5,14 +5,41 @@ body,p,span{
 
 
 /* Same Button Custom Style */
-.btn-primary {
-	background: #fff;
+.header_btn {
+	background: #fff !important;
 	color: #3f63e5;
 	border: none;
 	padding: 11px 27px;
 	font-size: 15px;
 	border-radius: 30px;
 	font-weight: 600;
+	position: relative;
+	z-index: 1;
+	transition: .5s;
+	overflow: hidden;
+	transition-duration: .5s;
+}
+.header_button a:hover{
+	color: #fff;
+}
+.header_btn::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	background: #7672fe;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+	transition: .5s;
+	transition-duration: .5s;
+}
+.header_btn:hover::after{
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
 }
 /* Header Section */
 .top_header{
@@ -26,17 +53,64 @@ body,p,span{
 ul.main_menu {
 	margin-right: 62px;
 }
-ul.main_menu li{}
 ul.main_menu li a {
 	text-decoration: none;
 	display: inline-block;
-	padding: 10px 16px;
+	padding: 10px 13px;
 	color: #5b5b5b;
 	font-weight: 500;
 	font-size: 13px;
+	position: relative;
 }
-ul.main_menu li a:hover{}
+.active_after::after{
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 2px;
+	top: 156%;
+	left: 8px;
+	background: #9a86e8;
 
+}
+ul.main_menu li .hover_active_a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	top: 156%;
+	left: 8px;
+	background: #9a86e8;
+	visibility: hidden;
+	transition: all .5s;
+}
+ul.main_menu li .hover_active_a:hover::after{
+	visibility: visible;
+	width: 80%;
+}
+/* DropDown Part */
+ul.main_menu li{
+	position: relative;
+}
+ul.main_menu li ul li .style_a {
+	font-size: 12px !important;
+	color: #fff;
+	background: #0010ff;
+	padding: 16px 17px;
+}
+ul.main_menu li ul {
+	position: absolute;
+	top: 163%;
+	left: 0;
+	width: 169px;
+	padding: 18px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .6s;
+}
+ul.main_menu li:hover ul{
+	opacity: 1;
+	visibility: visible;
+}
 /* Banner Section */
 .banner_section {
 	background: #edf6fe;
@@ -63,6 +137,14 @@ ul.main_menu li a:hover{}
 	font-weight: 400;
 	padding: 12px 16px;
 	margin-top: 30px;
+	border-radius: 30px;
+	border: 1px solid transparent;
+	transition: .5s ;
+}
+.banner_content .btn-primary:hover{
+	background: #fff;
+	color: #1d6df7;
+	border: 1px solid #1d6df7;
 }
 .banner_img{
     position: relative;
@@ -113,10 +195,15 @@ ul.main_menu li a:hover{}
 	border-radius: 10px;
 	box-shadow: 0px 0px 9px 0 rgba(0,0,0,.2);
     position: relative;
+	transition: all .5s;
+}
+.service_item:hover{
+	background: #3a4af2;
+	color: #fff;
 }
 .card_bg {
 	position: absolute;
-	top: 161%;
+	top: 158%;
 	left: 53px;
 	z-index: -1;
 }
@@ -124,38 +211,56 @@ ul.main_menu li a:hover{}
 	font-size: 18px;
 	margin-bottom: 15px;
 }
-.service_item span {
-	height: 60px;
-	width: 60px;
+.service_item i {
+	height: 64px;
+	width: 64px;
 	display: block;
 	background: #5a51ea;
 	color: #fff;
-	font-size: 31px;
+	font-size: 23px;
 	border-radius: 50% 50% 50% 0;
 	position: relative;
-	line-height: 60px;
+	line-height: 71px;
 	text-align: center;
+	transition: all .5s;
 }
-.service_item span::after {
+.service_item:hover i{
+	background: #fff;
+	color: #3a4af2;
+}
+.service_item i::after {
 	content: "";
 	position: absolute;
-	top: 68px;
+	top: 72px;
 	left: 0;
 	width: 27px;
-	height: 3px;
+	height: 2px;
 	background: #9c89e7;
+	transition: all .5s;
+}
+.service_item:hover i::after{
+	width: 50px;
+	background: #fff;
+}
+.service_item i:hover{
+	background: #fff;
 }
 .service_item p {
 	color: #b2b0b2;
 	font-weight: 500;
 	margin-top: 35px;
 	font-size: 14px;
+	transition: all .5s;
+}
+.service_item:hover p{
+	color: #fff;
 }
 
 /* Get Redy Section */
 .get_redy_section{
 	background: url(https://i.ibb.co/myRbsv6/video-bg.jpg) no-repeat top center;
 	background-size: cover;
+	background-attachment: fixed;
 	padding: 157px;
 	position: relative;
 	z-index: 1;
