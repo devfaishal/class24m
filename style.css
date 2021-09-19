@@ -266,14 +266,14 @@ ul.main_menu li:hover ul{
 	position: relative;
 	z-index: 1;
 }
-.get_redy_section::after{
+.get_redy_section::after {
 	content: "";
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(1, 38, 58, 0.802);
+	background: rgba(14, 32, 63, 0.7);
 	z-index: -1;
 }
 .content_text h6 {
